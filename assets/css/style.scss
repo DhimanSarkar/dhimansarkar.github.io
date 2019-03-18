@@ -1,0 +1,98 @@
+@import "fonts";
+@import "https://use.fontawesome.com/releases/v5.6.3/css/all.css";
+
+/* Global Tags */
+*, *:before, *:after 
+{
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+a, a:visited, a:hover, a:focus
+{
+	text-decoration: none;
+}
+html 
+{
+  -webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	cursor: default;
+	font-family: 'Lato', sans-serif;
+}
+
+body {
+	width:100%!Important;
+	height:100%;
+	margin:0;
+	padding:0;
+	background:white;
+}
+/* Global Tags */
+
+/* landing Page video background - START */
+#landing-page
+{
+    position: relative;
+    width:100%;
+    height: 100vh;
+    #homeVideo
+    {
+        position: relative;
+        top:0; // need to change this using js
+        left: 0; // need to change this using js
+        width: 100%;
+        // overflow: hidden;
+        z-index:-1;
+
+        #Video
+        {
+            min-width:100%;
+            min-height:100%;
+        }
+    }
+    /* landing Page video background - END */
+
+    #navbar
+    {
+        width:50%;
+        position: absolute;
+        bottom:0;
+        right:0;
+        display: flex;
+
+        ul
+        {
+            list-style: none;
+            flex:1;
+        }
+    }
+}
+
+#analogdesignVideo
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    // overflow: hidden;
+    z-index:-1;
+
+    #Video
+    {
+        min-width:100%;
+        min-height:100%;
+    }
+}
+
+#pcblayoutVideo
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    // overflow: hidden;
+    z-index:-1;
+
+    #Video
+    {
+        min-width:100%;
+        min-height:100%;
+    }
+}
