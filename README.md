@@ -1,2 +1,2 @@
 # Dhiman Sarkar Webpage/Blog
-visit [website]<dhimansarkar.github.io)>
+visit [website]:https://dhimansarkar.github.io
