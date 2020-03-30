@@ -40,6 +40,10 @@ button, a
     outline:none!important;
 }
 
+button::-moz-focus-inner, a::-moz-focus-inner {
+  border: 0;
+}
+
 #container
 {
     display: block;
