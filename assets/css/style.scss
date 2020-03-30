@@ -1,6 +1,23 @@
 html
 {
 
+
+}
+
+@media screen and (min-width: 900px) {
+    html {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 899px) {
+    html {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 15px;
+    }
 }
 
 body
@@ -15,6 +32,12 @@ body
     color: #3c3c3c;
     cursor: default;
     scroll-behavior: smooth;
+    outline:none!important;
+}
+
+button, a
+{
+    outline:none!important;
 }
 
 #container
@@ -29,36 +52,97 @@ body
 
 #nav
 {
-    padding:10px;
+    z-index: 999;
     position: fixed;
 }
 
-#nav-wrapper
+.nav-desktop
 {
-    li a 
+    width:20%;
+    padding:10px;
+    position: fixed;
+    display: inline-flex; // make us of Flexbox
+    align-items: center; // does vertically center the desired content
+    justify-content: right; // horizontally centers single line items
+    margin: auto;
+    margin-right: 0;
+    top: 0; left: 0; bottom: 0; right: 0;
+    #nav-wrapper
     {
-        pointer-events: none;
+        .nav-element
+        {
+            padding: 2px 0;
+            text-decoration: none;
+            list-style: none;
+            text-align: right; // Right Aligned Buttons
+            outline:none!important;
+
+            button
+            {
+                width: 100%;
+                text-align: right;
+                background:none;
+                margin:0;
+                border:none;
+                padding:2px 20px;
+                font-size: 1.2rem;
+                outline:none!important;
+            }
+        }
+
+        .nav-element:hover
+        {
+            background: #fff;
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255) 70%);
+        }
+
+        .active
+        {
+            background:hsla(0, 0%, 100%, 0.5);
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.75) 70%);
+            //clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+        }
     }
 }
-
 
 
 
 /// Home Section
 #home-wrapper
 {
-    padding: 10px;
-    height: 700px;
     background: #ff8787;
+    background: linear-gradient(180deg, #ffabab 0%, #67e5ff 100%);
+    position:absolute ;
+    left:0; right:0; top:0; bottom:0;
+    opacity: 0;
+    transition: opacity .3s ease-in;
+}
+
+#home-container
+{
+    background: #ff8787;
+    background: linear-gradient(180deg, #ffabab 0%, #67e5ff 100%);
+    padding: 20px;
+    min-height:calc(100vh - 40px);
+
 }
 
 
 /// Contact Section
 #contact-wrapper
 {
-    padding: 10px;
-    height: 700px;
+    position: absolute;
+    left:0; right:0; top:0; bottom:0;
+    opacity:0;
+    transition: opacity 0.3s ease-in;
+}
+
+#contact-container
+{
     background:#a8a8ff;
+    background: linear-gradient(180deg, #67e5ff 0%, #9c9cff 100%);
+    padding: 20px;
+    min-height:calc(100vh - 40px);
 }
 
 
@@ -66,7 +150,35 @@ body
 /// About Section
 #about-wrapper
 {
-    padding: 10px;
-    height: 700px;
+    padding: 0px;
+    position: absolute;
+    left:0; right:0; top:0; bottom:0;
+    opacity:0;
+
+    transition: opacity 0.3s ease-in;
+}
+
+#about-container
+{
+    min-height:calc(100vh - 40px);
+    padding:20px;
     background: #ffff89;
+    background: linear-gradient(180deg, #9c9cff 0%, #fffbbc 100%);
+
+}
+
+
+/////////////
+.show {
+    opacity:1!important;
+    z-index:2!important;
+}
+.hide {
+    opacity:0!important;
+    z-index:-1!important;
+}
+
+.d-none
+{
+    display: none!important;
 }

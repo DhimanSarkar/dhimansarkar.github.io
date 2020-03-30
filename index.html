@@ -9,31 +9,35 @@
 <body>
     <container id="container">
         <!--Nav-->
-        <nav id="nav">
+        <nav id="nav" class="nav-desktop">
             <ul id="nav-wrapper">
-                <li><button id="nav-home">Home</button></li>
-                <li><button id="nav-blog" href="https://blog.dhimansarkar.com">Blog</button></li>
-                <li><button id="nav-contact" href="">Contact Me</button></li>
-                <li><button id="nav-about" href="">About Me</button></li>
+                <li class="nav-element active"><button id="nav-home">Home</button></li>
+                <li class="nav-element"><button id="nav-blog" href="https://blog.dhimansarkar.com">Blog</button></li>
+                <li class="nav-element"><button id="nav-contact" href="">Contact Me</button></li>
+                <li class="nav-element"><button id="nav-about" href="">About Me</button></li>
+                <li class="nav-element"><button id="tstBtn">Click test button</button></li>
             </ul>
-            <button id="tstBtn">Click test button</button>
         </nav>
 
         <!-- Home Section -->
         <div id="home-wrapper">
-            <h1 style="background: #78ff8a; padding:5px; margin: 0; font-size: 1rem;">Hi, my name is Dhiman Sarkar and this is my personal webpage/blog. Since this page is under development. Please goto my <a href="https://fb.me/DhimanSarkar.Stan/" target="_blank">Facebook Profile</a>. Thank You.</h1>
-
-
+            <div id="home-container">
+                <h1 style="background: #78ff8a; padding:5px; margin: 0; font-size: 1rem;">Hi, my name is Dhiman Sarkar and this is my personal webpage/blog. Since this page is under development. Please goto my <a href="https://fb.me/DhimanSarkar.Stan/" target="_blank">Facebook Profile</a>. Thank You.</h1>
+            </div>
         </div>
 
         <!-- Contact Me -->
         <div id="contact-wrapper">
-            <h1>Contact Me</h1>
+            <div id="contact-container">
+                <h1>Contact Me</h1>
+            </div>
         </div>
 
         <!-- About Me Section -->
         <div id="about-wrapper">
-            <h1>About Me</h1>
+            <div id="about-container">
+                <h1>About Me</h1>
+            </div>
         </div>
 
     </container>
