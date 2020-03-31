@@ -41,6 +41,11 @@ body
 button, a
 {
     outline:none!important;
+    //text-decoration: none;
+}
+a:visited
+{
+    color:blue;
 }
 
 button::-moz-focus-inner, a::-moz-focus-inner {
