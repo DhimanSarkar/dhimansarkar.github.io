@@ -1,9 +1,8 @@
-const test_btn = document.getElementById("tstBtn");
-
 const home_btn = document.getElementById("nav-home");
 const blog_btn = document.getElementById("nav-blog");
 const contact_btn = document.getElementById("nav-contact");
 const about_btn = document.getElementById("nav-about");
+const nav_btn = document.getElementById("nav-button");
 
 const home_section = document.getElementById("home-wrapper");
 const blog_section = document.getElementById("blog-wrapper");
@@ -30,8 +29,7 @@ window.onload = () => {
 var view = function (nav_no)
 {
     if (nav_no === 1) { //Home Window
-        test_btn.style.background = "red";
-         home_section.style.display=""; // Enable Home Window
+        home_section.style.display=""; // Enable Home Window
         contact_section.style.display = "none"; // Dont Display Contact
         about_section.style.display = "none"; // Dont Display About
         home_section.scrollIntoView();
@@ -45,10 +43,9 @@ var view = function (nav_no)
         contact_section.classList.add("hide");
         contact_section.classList.remove("show");
     } else if (nav_no === 2) {
-        test_btn.style.background = "green";
+        
 
     } else if (nav_no === 3) { //Contact Window
-        test_btn.style.background = "blue";
         contact_section.style.display=""; // Enable Contact Window
         contact_section.scrollIntoView();
         home_btn.parentNode.classList.remove("active");
@@ -63,7 +60,6 @@ var view = function (nav_no)
         about_section.style.display = "none"; // Dont Display About
         home_section.style.display = "none"; // Dont Display Home
     } else if (nav_no === 4) {
-        test_btn.style.background = "yellow";
         about_section.style.display=""; //Enable About Window
         about_section.scrollIntoView();
         home_btn.parentNode.classList.remove("active");
@@ -78,9 +74,9 @@ var view = function (nav_no)
         home_section.style.display = "none"; // Dont Display Home
         contact_section.style.display = "none"; // Dont Display Contact
     } else if (nav_no === 5) {
-        test_btn.style.background = "purple";
+        
     } else { // Default set to Home i.e. 1
-        test_btn.style.background = "red";
+        
     }
 }
 
@@ -92,17 +88,22 @@ blog_btn.addEventListener("click", function(){view(2);});
 contact_btn.addEventListener("click", function(){view(3);});
 about_btn.addEventListener("click", function(){view(4);});
 
-/*
-window.onscroll = function () {
-    windowYOffset = window.pageYOffset;
-    console.log(windowYOffset);
+var nav = Boolean(false);
+nav_btn.addEventListener("click",()=>{
+    if(nav == false){
+        document.getElementById("nav-wrapper").style.display = "";
+        setTimeout(()=>{ 
+            document.getElementById("nav-wrapper").classList.remove("hide-nav"); 
+            document.getElementById("nav-wrapper").classList.add("show-nav");}, 50);
+            nav = Boolean(true);
+            }
+    else {
+        document.getElementById("nav-wrapper").classList.remove("show-nav"); 
+        document.getElementById("nav-wrapper").classList.add("hide-nav"); 
+        setTimeout(()=>{document.getElementById("nav-wrapper").style.display = "none"}, 100);
+        nav = Boolean(false);
+        }
 
-    if (windowYOffset === about_section.offsetTop) {
-        this.view(4);
-        this.console.log("about");
-    } 
-    else if (windowYOffset === contact_section.offsetTop) {
-        this.view(3);
-        this.console.log('contact');
-    }
-}*/
+    setTimeout( ()=>{nav_btn.style.transform="scale(.8)";}, 0);
+    setTimeout( ()=>{nav_btn.style.transform="scale(1)";}, 100);
+});
