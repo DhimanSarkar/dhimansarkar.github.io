@@ -107,3 +107,5 @@ nav_btn.addEventListener("click",()=>{
     setTimeout( ()=>{nav_btn.style.transform="scale(.8)";}, 0);
     setTimeout( ()=>{nav_btn.style.transform="scale(1)";}, 100);
 });
+
+this.console.clear();
