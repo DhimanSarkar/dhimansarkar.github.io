@@ -1,4 +1,4 @@
-let RequestURL = "http://worldtimeapi.org/api/timezone/Asia/Kolkata.json"
+let RequestURL = "https://worldtimeapi.org/api/timezone/Asia/Kolkata.json"
 var year;
 fetch(RequestURL)
     .then(res => res.json())
