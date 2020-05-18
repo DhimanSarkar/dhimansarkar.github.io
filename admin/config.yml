@@ -16,5 +16,5 @@ collections:
       - {label: "Last Modified at", name: "last_modified_at", widget: "date", dateFormat: "DD/MMMM/YYYY", format: "YYYY-MM-DD"}
       - {label: "Title", name: "title", widget: "string",  default: ""}
       - {label: "Image", name: "image", widget: "image", default: ""}
-      - {label: "Excerpt", name: "excerpt", widget: "string", required: true, default: ""}
-      - {label: "Body", name: "body", widget: "text", required: true, default: ""}
+      - {label: "Excerpt", name: "excerpt", widget: "markdown", required: true, default: ""}
+      - {label: "Body", name: "body", widget: "markdown", required: true, default: ""}
