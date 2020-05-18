@@ -180,6 +180,7 @@ button::-moz-focus-inner, a::-moz-focus-inner {
 {
     padding:10px 0;
     margin:20px 0;
+    @include sm{margin:0!important;}
     border-radius: 5px;
     width:100%;
     background:white;
