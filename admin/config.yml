@@ -14,7 +14,7 @@ collections:
     create: true
     fields:
       - {label: "", name: "layout", widget: "hidden",  default: "post"}
-      - {label: "Last Modified at", name: "last_modified_at", widget: "date", dateFormat: "DD MMMM YYYY", timeFormat: false,  format: "YYYY-MM-DD"}
+      - {label: "Last Modified at", name: "last_modified_at", widget: "datetime", dateFormat: "DD MMMM YYYY", timeFormat: hh:mm,  format: "YYYY-MM-DDTHH:mm:00+05:30"}
       - {label: "Title", name: "title", widget: "string",  default: ""}
       - {label: "Image", name: "image", widget: "image", default: ""}
       - {label: "Image Description", name: "image-alt", widget: "text", default: ""}
