@@ -7,8 +7,8 @@
           <div class="post">
             <h1 class="post-title">{{ post.title }}</h1>
             <h6 class="post-date">{{ post.date | date_to_long_string }}</h6>
-            <p class="post-excerpt">{{ post.excerpt }}<a class="post-link" href="{{ post.url }}"><button>More ... </button></a>
-            </p>
+            <div class="post-excerpt">{{ post.excerpt | markdownify}}</div>
+            <a class="post-link" href="{{ post.url }}"><button>More ... </button></a>
           </div>
           <hr class="hr">
         {% endfor %}
