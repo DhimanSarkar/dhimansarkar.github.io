@@ -1,0 +1,377 @@
+$sm:500px;
+$md:899px;
+$lg:900px;
+@mixin lg 
+{
+	@media (min-width:#{$lg})
+	{
+		@content;
+	}
+}
+@mixin md 
+{
+	@media (max-width:#{$md})
+	{
+		@content;
+	}
+}
+@mixin sm 
+{
+	@media (max-width:#{$sm})
+	{
+		@content;
+	}
+}
+ //////////////////////////////////////////////
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Hammersmith+One&family=Roboto&display=swap');
+html
+{
+    
+    font-family: 'Roboto', sans-serif;
+
+}
+
+@media screen and (min-width: 900px) {
+    html {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 899px) {
+    html {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+body
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background:#ffffff;
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    color: #3c3c3c;
+    cursor: default;
+    scroll-behavior: smooth;
+    outline:none!important;
+}
+
+button, a
+{
+    outline:none!important;
+    //text-decoration: none;
+}
+a:visited
+{
+    color:blue;
+}
+
+button::-moz-focus-inner, a::-moz-focus-inner {
+  border: 0;
+}
+
+#container
+{
+    display: block;
+    padding: 0;
+    margin:0;
+    width:100%;
+    background-color: white;
+}
+
+#blog-header
+{
+    position: relative;
+    z-index: 999;
+    background: rgb(15, 15, 15);
+    display: flex;
+    padding:5px;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+    h1
+    {
+        position: relative;
+        left:0;
+        right:0;
+        padding:0;
+        margin:0;
+        font-size: 1.3rem;
+        color:#e2e2e2;
+    }
+    #blog-nav-button
+    {
+        position: absolute;
+        right: 0px;
+        background: none;
+        border:none;
+        padding:0;
+        margin: 10px;
+        .fas
+        {
+            color:white;
+        }
+    }
+    .rotate-up
+    {
+        transition: transform .3s ease-in;
+        transform:rotate(-180deg)!important;
+    }
+    .rotate-down
+    {
+        transition: transform .3s ease-in;
+        transform:rotate(-360deg)!important;
+    }
+}
+
+#blog-nav
+{
+    z-index: 100;
+    margin:10px;
+    background:black;
+    color:white;
+    position: absolute;
+    top:70px;
+    right:0px;
+    transform: translateY(-230px);
+    transition: transform .3s ease-in;
+    #blog-nav-wrapper
+    {
+        padding:10px;
+        margin:0;
+        list-style: none;
+        li
+        {
+            padding:30px 10px;
+            a
+            {
+                text-decoration: none;
+                color:white;
+                padding:20px 10px;
+                margin: 10px 0;
+            }
+        }
+    }
+}
+.show
+{
+    transform: translateY(0px)!important;
+}
+.hide
+{
+    transform: translateY(-230px)!important;
+}
+
+#content-wrapper
+{
+    display:flex;
+    justify-content: center;
+    background: #fffff1;
+    min-height: 100vh;
+}
+
+.post-container
+{
+    padding:10px 0;
+    margin:20px 0;
+    border-radius: 5px;
+    width:100%;
+    background:white;
+    box-shadow: 0px 0px 10px 0px #888888;
+    transition: width .3s ease-in;
+}
+
+@media screen and (min-width: 900px) {
+    .post-container {
+        width:850px;
+    }
+}
+@media screen and (max-width: 899px) {
+    .post-container {
+        width:500px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .post-container {
+        width:100%;
+    }
+}
+
+.post
+{
+    padding:10px;
+    margin:10px;
+    height:auto;
+
+    .post-title , .post-excerpt, .post-date, .post-content
+    {
+        padding:1px;
+        margin:0;
+        text-align: justify;
+    }
+    .post-content
+    {
+        img
+        {
+            width:100%;
+        }
+    }
+    .post-content>:nth-child(1)::first-letter
+    {
+        color:#fff;
+        font-size: 2rem;
+        font-weight: bolder;
+        background-color: #000;
+        padding:0 5px;
+        font-family: 'Courgette', cursive;
+    }
+    .post-title{
+        font-size: 1.4rem;
+        color: black;
+    }
+    .post-date
+    {
+        color:#bdbdbd;
+        font-size: .4rem;
+    }
+    .post-img-container
+    {
+        width:100%;
+        @include lg {height: 350px;}
+        @include md {height: 220px;}
+        @include sm {height: 120px;}
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        img
+        {
+            width:100%;
+        }
+    }
+    .post-excerpt
+    {
+        padding-left: 20px;
+        font-size: .6rem;
+    }
+    .post-content
+    {
+        @include lg {font-size:.7rem;}
+        @include md {font-size:.9rem;}
+        @include sm {font-size:.9rem;}
+    }
+    .post-link
+    {
+        float: right;
+        button
+        {
+            width:100%;
+            background:#20b2aa;
+            padding:5px;
+            border:none;
+            //box-shadow: 0px 0px 5px 1px #286966;
+        }
+    }
+}
+
+.post-nav
+{
+    //display: flex;
+    padding:0 50px;
+    .prev-post
+    {
+        float:left;
+        text-align: center;
+    }
+    .next-post
+    {
+        float:right;
+        text-align: center;
+    }
+    .prev-post-link, .next-post-link
+    {
+        text-decoration: none;
+        font-size: .6rem;
+        color:#20b2aa;
+    }
+    .prev-post-link::before
+    {
+        content: "<<";
+    }
+    .next-post-link::after
+    {
+        content: ">>";
+    }
+    .prev-post-title, .next-post-title
+    {
+        padding:0;
+        margin:0;
+        font-size: .6rem;
+        color:#979797;
+    }
+}
+
+.hr
+{
+    width:90%;
+    border-color: rgb(243, 243, 243);
+}
+
+footer
+{
+    position: relative;
+    z-index: 999;
+    background: black;
+    height: 40px;
+}
+
+#blog-archive
+{
+    display: block;
+    h1
+    {
+        margin:0;
+        padding:0;
+        font-size: .9rem;
+    }
+
+    .archive-year
+    {
+
+    }
+    .archive-month
+    {
+        
+    }
+    .archive-posts
+    {
+        margin-left:50px;
+    }
+
+    .archive-year-btn
+    {
+
+    }
+    .archive-month-btn
+    {
+        margin-left:20px;
+    }
+
+    .archive-year::after
+    {
+        content: ">";
+    }
+    .archive-year-btn:hover
+    {
+        .archive-year::after
+    {
+        content: "l";
+    }
+    }
+}
