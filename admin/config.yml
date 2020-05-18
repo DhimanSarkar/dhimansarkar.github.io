@@ -13,8 +13,9 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true
     fields:
-      - {label: "Last Modified at", name: "last_modified_at", widget: "date", dateFormat: "DD/MMMM/YYYY", format: "YYYY-MM-DD"}
+      - {label: "Last Modified at", name: "last_modified_at", widget: "date", dateFormat: "DD MMMM YYYY", timeFormat: false,  format: "YYYY-MM-DD"}
       - {label: "Title", name: "title", widget: "string",  default: ""}
       - {label: "Image", name: "image", widget: "image", default: ""}
+      - {label: "Image Description", name: "image-alt", widget: "text", default: ""}
       - {label: "Excerpt", name: "excerpt", widget: "markdown", required: true, default: ""}
       - {label: "Body", name: "body", widget: "markdown", required: true, default: ""}
