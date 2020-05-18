@@ -318,10 +318,13 @@ button::-moz-focus-inner, a::-moz-focus-inner {
     }
 }
 
-.hr
+.hr, hr
 {
+    margin: 0 5%;
     width:90%;
-    border-color: rgb(243, 243, 243);
+    border: none;
+    border-top: solid 1px;
+    border-color: rgb(240, 240, 240);
 }
 
 footer
