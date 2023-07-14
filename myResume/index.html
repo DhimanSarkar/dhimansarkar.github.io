@@ -8,6 +8,7 @@
     <div id="container-parent">    
         <div id="container">
             <div id="top">
+              <h1 id="notice"></h1>
                 <h1 class="heading">My Résumé</h1>
                 <h2 class="heading">Download will start atomatically... </h2>
             </div>
@@ -96,6 +97,13 @@
         padding: 2px; 
         margin:2px;
         color: #1b1b1b;  
+    }
+    #notice
+    {
+      background-color: yellow;
+      color: red;
+      margin:0;
+      padding: 0;
     }
 
     #dwn-btn
@@ -456,10 +464,10 @@
                                           setTimeout(()=>{document.location.href = resumePDF}, 2000);
                                         }
                                         else if(pdfVersion==commitID){
-                                          alert("You have the updated PDF!");
+                                          document.getElementById("notice").innerHTML="You have the latest PDF!";
                                         }
                                         else{
-                                          alert("Updated PDF Available!");
+                                          document.getElementById("notice").innerHTML="Updated PDF Available!";
                                           setTimeout(()=>{document.location.href = resumePDF}, 0);
                                         }
                                     });
