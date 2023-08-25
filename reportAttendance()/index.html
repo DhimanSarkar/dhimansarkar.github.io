@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reportAttendance()</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div>
+        <div class="student-container">
+            <button id="btn-left" onclick="updateFields(studentIndex-1)">←</button>
+            <div class="student-details">
+                <h1 class="student-name" id="att-name">Student Name</h1>
+                <input class= "student-roll" id="att-roll" type="text">
+                <input id="att-date" type="date">
+            </div>
+            <button id="btn-right" onclick="updateFields(studentIndex+1)">→</button>
+        </div>
+        <div class="btn-container">
+            <button class="btn btn-A" id="btn-A" onclick="recordAttendance(studentIndex,'A')">Absent</button>
+            <button class="btn btn-P" id="btn-P" onclick="recordAttendance(studentIndex,'P')">Present</button>
+            <button class="btn btn-E" id="btn-E" onclick="recordAttendance(studentIndex,'E')">Excused</button>
+            <button class="btn btn-S" id="btn-submit" onclick="submitAttendance()">Submit</button>
+        </div>
+        <a href="https://docs.google.com/spreadsheets/d/1216Ury4U4v3_9B6RTEvBc3vBOLQfZfYMnh5hZYGFZf8/edit?usp=sharing" target="_blank">View Attendance Sheet!</a>
+    </div>
+</body>
+</html>
+<script src="./script.js"></script>

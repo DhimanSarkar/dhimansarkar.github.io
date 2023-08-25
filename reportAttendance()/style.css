@@ -1,0 +1,55 @@
+.student-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.student-details
+{
+    padding: 0 20px 0 20px;
+    text-align: center;
+}
+
+.student-name
+{
+    text-align: center;
+}
+.student-roll
+{
+    text-align: center;
+}
+
+.btn-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}
+
+.btn
+{
+    margin: 10px;
+    padding: 10px;
+}
+
+.btn-A
+{
+    color: red;
+}
+
+.btn-P
+{
+    color: green;
+}
+
+.btn-E
+{
+    color: blue;
+}
+
+.btn-S
+{
+    color: orange;
+}
