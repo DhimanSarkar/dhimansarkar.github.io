@@ -38,16 +38,22 @@
 .btn-A
 {
     color: red;
+    font-size: 3em;
+    padding: 20px;
 }
 
 .btn-P
 {
     color: green;
+    font-size: 3em;
+    padding: 20px;
 }
 
 .btn-E
 {
     color: blue;
+    font-size: 3em;
+    padding: 20px;
 }
 
 .btn-S
