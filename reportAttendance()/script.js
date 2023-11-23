@@ -12,11 +12,11 @@ var studentList = {};
 var attendanceData = {};
 var studentIndex=0;
 
-var webapp = "https://script.google.com/macros/s/AKfycbxbTTKSAMaSon9ZdvWtWPIr46sv7bSLEdKhKMx-Db-CaeyQ5gQVnDvU_ilryoudpHdl/exec";
+var webapp = null;
 
-var spreadsheet_id = "1216Ury4U4v3_9B6RTEvBc3vBOLQfZfYMnh5hZYGFZf8";
+var spreadsheet_id = null;
 var tab_name = "Sheet1";
-var api_key = "AIzaSyCB3lPO2YKpt89gZChm9jGCvkZCkJdTivE";
+var api_key = null;
 var url = 'https://sheets.googleapis.com/v4/spreadsheets/' +
            spreadsheet_id + '/values/' + tab_name +
            '?alt=json&key=' + api_key;
