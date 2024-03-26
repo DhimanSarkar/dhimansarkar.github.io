@@ -45,7 +45,7 @@
     </div>
 
     <!-- Background Animation-->
-
+    <div id="background-animation"></div>
    
 </body>
 </html>
@@ -106,7 +106,9 @@
     #dwn-btn
     {
         padding: 2px; 
-        margin:2px  ;   
+        margin:2px  ;
+        box-shadow: #4a4e526c 0px 8px 24px;
+   
     }
 
     .dwn-link{
@@ -114,8 +116,7 @@
         font-family: helvetica;
         text-decoration: none;
         margin: 2px;
-        padding:10px;
-        
+        padding:10px;        
     }
 
     .social
@@ -132,7 +133,7 @@
 
     .social-icon
     {
-
+      
     }
 
     #version-details
@@ -232,3 +233,36 @@
                                         }
                                     });
 </script>
+
+<style>
+#background-animation {
+    width: 100vw; height: 100vh; margin: 0;
+    position: absolute;
+    left: 0; top: 0;
+    z-index: -1;
+  }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.birds.min.js"></script>
+<script>
+    VANTA.BIRDS({
+      el: "#background-animation",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      backgroundColor: 0xffffff,
+      color1: 0xed1010,
+      color2: 0xe3ff,
+      birdSize: 1,
+      wingSpan: 25.00,
+      speedLimit: 3.00,
+      separation: 50.00,
+      alignment: 100.00,
+      cohesion: 26.00,
+      quantity: 5.00
+    });
+    </script>
