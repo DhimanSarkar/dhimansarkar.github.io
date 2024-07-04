@@ -1,9 +1,6 @@
-### Hugo ###
-# Generated files by hugo
-/public/
-/resources/_gen/
-/assets/jsconfig.json
-hugo_stats.json
+### Pelican ###
+output/
+__pycache__/
 
 # Executable may be added to repository
 hugo.exe
