@@ -4,6 +4,8 @@ SITEURL = ""
 
 PATH = "content"
 
+THEME = "theme/eevee"
+
 TIMEZONE = 'Asia/Kolkata'
 
 DEFAULT_LANG = 'English'
