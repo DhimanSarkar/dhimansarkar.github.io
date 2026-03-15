@@ -1,10 +1,8 @@
 AUTHOR = 'Dhiman Sarkar'
-SITENAME = 'My Site'
+SITENAME = 'Hi! My Name Is Dhiman Sarkar'
 SITEURL = ""
 
 PATH = "content"
-
-THEME = "theme/eevee"
 
 TIMEZONE = 'Asia/Kolkata'
 
@@ -19,16 +17,24 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (
-    ("Pelican", "https://getpelican.com/"),
-    ("Python.org", "https://www.python.org/"),
-    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
-    ("You can modify those links in your config file", "#"),
+    ("LinkedIn", "https://www.linkedin.com/in/dhiman-sarkar/"),
+    ("ORCiD", "https://orcid.org/0009-0006-8050-6432/"),
+    ("GitHub", "https://github.com/DhimanSarkar/"),
+    ("Reddit", "https://www.reddit.com/user/dhiman_eminem/"),
+    ("Mastodon", "https://mastodon.social/@DhimanSarkar/"),
+    ("Facebook", "https://facebook.com/dhiman.eminem/"),
+    ("Twitter", "https://twitter.com/_Dhiman_Sarkar_/"),
 )
 
 # Social widget
 SOCIAL = (
-    ("You can add links in your config file", "#"),
-    ("Another social link", "#"),
+    ("LinkedIn", "https://www.linkedin.com/in/dhiman-sarkar/"),
+    ("ORCiD", "https://orcid.org/0009-0006-8050-6432/"),
+    ("GitHub", "https://github.com/DhimanSarkar/"),
+    ("Reddit", "https://www.reddit.com/user/dhiman_eminem/"),
+    ("Mastodon", "https://mastodon.social/@DhimanSarkar/"),
+    ("Facebook", "https://facebook.com/dhiman.eminem/"),
+    ("Twitter", "https://twitter.com/_Dhiman_Sarkar_/"),
 )
 
 DEFAULT_PAGINATION = 10

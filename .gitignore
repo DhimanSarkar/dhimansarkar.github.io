@@ -1,11 +1,173 @@
-### Pelican ###
-output/
+# ============================================================
+#  .gitignore — OS / Editor / Pelican
+# ============================================================
+
+
+# ────────────────────────────────────────────────────────────
+#  WINDOWS
+# ────────────────────────────────────────────────────────────
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+*.url
+[Dd]esktop.ini
+*.stackdump
+
+
+# ────────────────────────────────────────────────────────────
+#  macOS
+# ────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+.AppleDB
+.AppleDesktop
+.apdisk
+Icon\r
+Network Trash Folder/
+Temporary Items/
+
+
+# ────────────────────────────────────────────────────────────
+#  LINUX
+# ────────────────────────────────────────────────────────────
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+
+# ────────────────────────────────────────────────────────────
+#  THUMBNAILS & CACHE (cross-platform)
+# ────────────────────────────────────────────────────────────
+*.cache
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.orig
+*.log
+[Tt]humbs/
+[Tt]humbnails/
+.cache/
 __pycache__/
+*.py[cod]
+*$py.class
 
-# Executable may be added to repository
-hugo.exe
-hugo.darwin
-hugo.linux
 
-# Temporary lock file while building
-/.hugo_build.lock
+# ────────────────────────────────────────────────────────────
+#  EDITORS & IDEs
+# ────────────────────────────────────────────────────────────
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains (PyCharm, IntelliJ, …)
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Vim / Neovim
+*.vim
+Session.vim
+.netrwhist
+
+# Emacs
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+
+# ────────────────────────────────────────────────────────────
+#  PYTHON / VIRTUAL ENVIRONMENTS
+# ────────────────────────────────────────────────────────────
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+
+# ────────────────────────────────────────────────────────────
+#  PELICAN
+# ────────────────────────────────────────────────────────────
+
+# Generated output
+output/
+
+# Pelican cache
+.pelican/
+cache/
+__cache__/
+
+# Auto-generated settings
+publishconf.py.bak
+
+# Pelican plugins (if installed locally rather than via pip)
+# Uncomment the line below if your plugins live inside the repo
+# plugins/
+
+# Theme compiled assets (if you build them locally)
+# Uncomment if applicable
+# theme/static/css/*.min.css
+# theme/static/js/*.min.js
+
+# Jupyter notebooks auto-converted by pelican-jupyter
+*.nbconvert.ipynb
+
+# ────────────────────────────────────────────────────────────
+#  MISC
+# ────────────────────────────────────────────────────────────
+*.pid
+*.seed
+*.pid.lock
+*.gz
+*.tar
+*.zip
+*.7z
+*.rar
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
